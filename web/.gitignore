@@ -1,4 +1,7 @@
-/.idea
+
+# Created by https://www.gitignore.io/api/node
+
+### Node ###
 # Logs
 logs
 *.log
@@ -15,6 +18,7 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+/.idea
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
@@ -24,8 +28,12 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directory
+# /dist folder
+dist
+
+# Dependency directories
 node_modules
+jspm_packages
 
 # Optional npm cache directory
 .npm
