@@ -45,4 +45,6 @@ module.exports = {
     filename: "app.js",
     path: __dirname + "/dist",
   },
+
+  devtool: 'source-map',
 }
