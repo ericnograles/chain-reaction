@@ -15,17 +15,17 @@ class Login extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.user) {
+    if (this.props.user.status === 'authenticated') {
       browserHistory.push('/sample');
     }
   }
 
-  handleEmail(email) {
-    this.props.dispatch(keyPressEmail(email))
+  handleEmail(event) {
+    this.props.dispatch(keyPressEmail(event.target.value))
   }
 
-  handlePassword(password) {
-    this.props.dispatch(keyPressPassword(password));
+  handlePassword(event) {
+    this.props.dispatch(keyPressPassword(event.target.value));
   }
 
   handleLogin() {

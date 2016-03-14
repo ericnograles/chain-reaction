@@ -6,8 +6,8 @@ export default class LoginForm extends Component {
 
     return (
       <div className="loginForm">
-        Email: <input type="text" /> <br />
-        Password: <input type="text" />
+        Email: <input type="text" onChange={this.props.handleEmail} /> <br />
+        Password: <input type="text" onChange={this.props.handlePassword} />
       </div>
     );
   }

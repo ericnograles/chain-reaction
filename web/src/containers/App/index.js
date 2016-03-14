@@ -7,7 +7,7 @@ import Home from '../Home';
 import Sample from '../Sample';
 import Login from '../Login';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.requireAuth = this.requireAuth.bind(this);
@@ -27,18 +27,9 @@ class App extends Component {
       <Router history={browserHistory}>
         <Route path="/" component={Home}></Route>
         <Route path="/login" component={Login}></Route>
-        <Route path="/sample" component={Sample} onEnter={this.requireAuth}></Route>
+        <Route path="/sample" component={Sample}></Route>
         <Route path="*" component={Home}></Route>
       </Router>
     );
   }
 }
-
-function mapStateToProps(state) {
-  const { user } = state;
-  return {
-    user
-  };
-}
-
-export default connect(mapStateToProps)(App);
