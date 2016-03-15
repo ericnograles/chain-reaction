@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router';
-import { connect } from 'react-redux';
-import { ROUTE_CONFIG } from './routes';
 
-class App extends Component {
+import Home from '../Home';
+import Sample from '../Sample';
+import Login from '../Login';
+
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.requireAuth = this.requireAuth.bind(this);
   }
 
   requireAuth(nextState, replace) {
-    if (!this.props.user) {
+    var store = this.props.store;
+    if (store.getState().user.status !== 'authenticated') {
       replace({
         pathname: '/login',
         state: { nextPathname: nextState.location.pathname }
@@ -21,17 +24,12 @@ class App extends Component {
 
   render() {
     return (
-      <Router history={browserHistory} routes={ROUTE_CONFIG}>
+      <Router history={browserHistory}>
+        <Route path="/" component={Home}></Route>
+        <Route path="/login" component={Login}></Route>
+        <Route path="/sample" component={Sample} onEnter={this.requireAuth}></Route>
+        <Route path="*" component={Home}></Route>
       </Router>
     );
   }
 }
-
-function mapStateToProps(state) {
-  const { user } = state;
-  return {
-    user
-  };
-}
-
-export default connect(mapStateToProps)(App);

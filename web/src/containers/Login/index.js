@@ -15,7 +15,7 @@ class Login extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.user.status === 'authenticated') {
+    if (nextProps.user.status === 'authenticated') {
       browserHistory.push('/sample');
     }
   }
