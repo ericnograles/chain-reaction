@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/ericnograles/react-for-beginners.git"
   },
-  "author": "Crafty Digital Solutions LLC",
+  "author": "Eric Nograles",
   "license": "MIT",
   "homepage": "https://github.com/ericnograles/react-for-beginners",
   "dependencies": {
