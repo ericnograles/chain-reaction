@@ -6,6 +6,12 @@ export NVM_DIR=~/.nvm
 # Baseline to Node LTS
 nvm install 4.3.1
 
+# Grab npm3 so we don't jack up people's npm 2.x configs
+npm install -g npm3
+
+# Global dependencies
+npm3 install react-native-cli webpack webpack-dev-server -g
+
 # Clone repos, if necessary
 [ ! -d ./chain-reaction.common ] && git clone https://github.com/ericnograles/chain-reaction.common.git
 [ ! -d ./chain-reaction.mobile ] && git clone https://github.com/ericnograles/chain-reaction.mobile.git
@@ -15,20 +21,24 @@ nvm install 4.3.1
 # npm installs and git pulls
 # API
 cd ./chain-reaction.api
+rm -rf ./node_modules
 git pull
-npm install
+npm3 install
 
 # Common
 cd ../chain-reaction.common
+rm -rf ./node_modules
 git pull
-npm install
+npm3 install
 
 # Web
 cd ../chain-reaction.web
+rm -rf ./node_modules
 git pull
-npm install
+npm3 install
 
 # Mobile
 cd ../chain-reaction.mobile
+rm -rf ./node_modules
 git pull
-npm install
+npm3 install
