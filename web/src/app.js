@@ -3,9 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './containers/App';
-import configureStore from '../../common/store/configureStore';
+import * as common from '../../common';
 
-const store = configureStore();
+const store = common.configureStore();
 
 // Stylesheets
 require('./assets/styles/main.css');
@@ -15,7 +15,7 @@ require('./assets/images/react-favicon.ico');
 
 ReactDOM.render(
   <Provider store={store}>
-    <App store={store} />
+    <App store={store} common={common} />
   </Provider>,
   document.getElementById('app')
 );

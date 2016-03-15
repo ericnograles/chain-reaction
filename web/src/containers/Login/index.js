@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { keyPressEmail, keyPressPassword, requestLogin, login } from '../../../../common/actions';
-
+import * as common from '../../../../common';
 import LoginForm from '../../components/LoginForm';
 
 class Login extends Component {
@@ -21,17 +20,17 @@ class Login extends Component {
   }
 
   handleEmail(event) {
-    this.props.dispatch(keyPressEmail(event.target.value))
+    this.props.dispatch(common.actions.keyPressEmail(event.target.value))
   }
 
   handlePassword(event) {
-    this.props.dispatch(keyPressPassword(event.target.value));
+    this.props.dispatch(common.actions.keyPressPassword(event.target.value));
   }
 
   handleLogin() {
     const { dispatch, email, password } = this.props;
-    dispatch(requestLogin(email));
-    dispatch(login(email, password));
+    dispatch(common.actions.requestLogin(email));
+    dispatch(common.actions.login(email, password));
   }
 
   render() {
