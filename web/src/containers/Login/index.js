@@ -43,7 +43,8 @@ class Login extends Component {
                    password={password}
                    user={user}
                    handleEmail={this.handleEmail}
-                   handlePassword={this.handlePassword} />
+                   handlePassword={this.handlePassword}
+                   handleLogin={this.handleLogin} />
         <div className="login-error">
           {hasLoginError ? 'Error logging in. ' + this.props.user.error : null}
         </div>

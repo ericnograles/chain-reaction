@@ -30,13 +30,15 @@ export function user(state = InitialStates.user, action) {
   switch (action.type) {
     case REQUEST_LOGIN:
       return Object.assign({}, state, {
-        email: action.email
+        email: action.email,
+        status: 'authenticating'
       });
     case RECEIVE_LOGIN:
       return Object.assign({}, state, {
         email: action.email,
         profile: action.profile,
-        error: action.error
+        error: action.error,
+        status: action.error ? 'unauthenticated' : 'authenticated'
       });
     case LOGOUT:
       return Object.assign({}, state, {
