@@ -6,26 +6,29 @@ export NVM_DIR=~/.nvm
 # Baseline to Node LTS
 nvm install 4.3.1
 
-# Clone repos
-git clone https://github.com/ericnograles/chain-reaction.common.git
-git clone https://github.com/ericnograles/chain-reaction.mobile.git
-git clone https://github.com/ericnograles/chain-reaction.web.git
-git clone https://github.com/ericnograles/chain-reaction.api.git
+# Clone repos, if necessary
+[ ! -d ./chain-reaction.common ] && git clone https://github.com/ericnograles/chain-reaction.common.git
+[ ! -d ./chain-reaction.mobile ] && git clone https://github.com/ericnograles/chain-reaction.mobile.git
+[ ! -d ./chain-reaction.web ] && git clone https://github.com/ericnograles/chain-reaction.web.git
+[ ! -d ./chain-reaction.api ] && git clone https://github.com/ericnograles/chain-reaction.api.git
 
-# npm install
+# npm installs and git pulls
 # API
-# cd ./chain-reaction.api
-# npm install
+cd ./chain-reaction.api
+git pull
+npm install
 
 # Common
-# cd ../chain-reaction.common
-# npm install
+cd ../chain-reaction.common
+git pull
+npm install
 
 # Web
-# cd ../chain-reaction.web
-# npm install
+cd ../chain-reaction.web
+git pull
+npm install
 
 # Mobile
-# cd ../chain-reaction.mobile
-# npm install
-
+cd ../chain-reaction.mobile
+git pull
+npm install
