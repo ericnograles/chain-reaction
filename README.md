@@ -8,8 +8,9 @@ This project represents a hypothetical multi-platform application called **Chain
 
 ## Installation
 
-1. Clone this repo
-2. Run `./start.sh`
+1. Install [Node Version Manager](https://github.com/creationix/nvm)
+2. Clone this repo
+3. Run `./start.sh`
 
 ## Run the API
 
