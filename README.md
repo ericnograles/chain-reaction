@@ -26,6 +26,7 @@ This project represents a hypothetical multi-platform application called **Chain
 
 1. In a terminal from the root of this repo, type in `cd ./chain-reaction.mobile`
 2. Run `./start.sh`
+3. Open another terminal and run `react-native run-ios`
 
 # Architecture
 
