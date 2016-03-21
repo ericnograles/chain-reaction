@@ -9,13 +9,15 @@ This project represents a hypothetical multi-platform application called **Chain
 ## Installation
 
 1. Install [Node Version Manager](https://github.com/creationix/nvm)
-2. Clone this repo
-3. Run `./start.sh`
+2. Install [MongoDB](https://docs.mongodb.org/manual/installation/)
+3. Clone this repo
+4. Run `./start.sh`
 
 ## Run the API
 
 1. In a terminal from the root of this repo, type in `cd ./chain-reaction.api`
-2. Run `node app.js`
+2. Make sure mongodb is running
+3. Run `node app.js`
 
 ## Run the Web Client
 
