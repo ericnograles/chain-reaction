@@ -39,8 +39,6 @@ This project represents a hypothetical multi-platform application called **Chain
 
 The chain-reaction.common library represents all cross-platform shareable code.  This includes all Redux components (store, reducers, actions) and also infrastructure items (services) that talk to external resources, such as a Web API.
 
-The `chain-reaction.web` and `chain-reaction.mobile` repos reference the repo of this library directly in their [NPM](https://npmjs.org) dependencies (package.json).  This is meant to simulate a dependency to a private NPM repo.
-
 ## [chain-reaction.api](https://github.com/ericnograles/chain-reaction.api)
 
 A simple [Sails.js](http://sailsjs.org/) Web API that serves as the backend for the app
