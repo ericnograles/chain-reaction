@@ -10,7 +10,7 @@ nvm install 4.3.1
 npm install -g npm3
 
 # Global dependencies
-npm3 install react-native-cli webpack webpack-dev-server -g
+npm3 install react-native-cli webpack webpack-dev-server babel-cli -g
 
 # Clone repos, if necessary
 [ ! -d ./chain-reaction.common ] && git clone https://github.com/ericnograles/chain-reaction.common.git
