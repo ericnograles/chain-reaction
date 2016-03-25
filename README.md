@@ -32,8 +32,9 @@ This project represents a hypothetical multi-platform application called **Chain
 ## Run the iOS App
 
 1. In a terminal from the root of this repo, type in `cd ./chain-reaction.mobile`
-2. Run `./start.sh`
-3. Open another terminal and run `react-native run-ios`
+2. Run `./install.sh`
+3. Run `node react-native-packager.js`
+4. In a separate terminal, run `react-native run-ios`
 
 # Architecture
 
