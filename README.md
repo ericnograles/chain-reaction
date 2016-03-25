@@ -12,7 +12,7 @@ This project represents a hypothetical multi-platform application called **Chain
 2. Install [MongoDB](https://docs.mongodb.org/manual/installation/)
   * (Mac OSX Users) You may want to install [Homebrew](https://brew.sh) and then run `brew install mongodb`
 3. Clone this repo
-4. Run `./start.sh`
+4. Run `./install.sh`
 
 **Note**: This project has not been tested in a Windows machine, but should theoretically work, assuming you have a bash port for Windows installed, such as [cygwin](http://www.cygwin.com/) or [win-bash](http://win-bash.sourceforge.net/)
 
