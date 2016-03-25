@@ -26,8 +26,8 @@ This project represents a hypothetical multi-platform application called **Chain
 
 1. In a terminal from the root of this repo, type in `cd ./chain-reaction.web`
 2. Run `./start.sh`
-3. Open Chrome and browse to `http://localhost:8080` for the web app.
-4. Open Chrome and browse to to `http://localhost:8082` for the mocha unit tests.
+3. Wait for browsers to open.  `http://localhost:8080` is the web application and `http://localhost:8082` are your unit tests.
+  * **Note**: Both will live reload as you modify files
 
 ## Run the iOS App
 
