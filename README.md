@@ -16,6 +16,13 @@ This project represents a hypothetical multi-platform application called **Chain
 
 **Note**: This project has not been tested in a Windows machine, but should theoretically work, assuming you have a bash port for Windows installed, such as [cygwin](http://www.cygwin.com/) or [win-bash](http://win-bash.sourceforge.net/)
 
+## Run the Common Library
+
+1. In a terminal from the root of this repo, type in `cd ./chain-reaction.common`
+2. Run `npm run dev`
+
+**Note**: The common library gets transpiled to ES5 using [Babel](https://babeljs.io/) and we utilize [Nodemon](https://github.com/remy/nodemon) to watch any changes to `/src`, which will then compile into `/lib` automatically once you run `npm run dev`
+
 ## Run the API
 
 1. In a terminal from the root of this repo, type in `cd ./chain-reaction.api`
@@ -40,18 +47,30 @@ This project represents a hypothetical multi-platform application called **Chain
 
 ## [chain-reaction.common](https://github.com/ericnograles/chain-reaction.common)
 
+### Overview
+
 The chain-reaction.common library represents all cross-platform shareable code.  This includes all Redux components (store, reducers, actions) and also infrastructure items (services) that talk to external resources, such as a Web API.
 
+### Development Mode
+This library was designed to be independent of any client framework.  As such, you'll notice that we use [NPM symlinks](https://www.npmjs.com/package/symlink) in the root `install.sh` to point the Web and Mobile projects to the source code.  This is so that you can develop on the library concurrently with the web and mobile components.
+
+In practice, a library like this may live in npm (public or private) which you can then `npm install` normally into the web or mobile projects, as any other Node library.
+
 ## [chain-reaction.api](https://github.com/ericnograles/chain-reaction.api)
+
+### Overview
 
 A simple [Sails.js](http://sailsjs.org/) Web API that serves as the backend for the app
 
 ## [chain-reaction.web](https://github.com/ericnograles/chain-reaction.web)
 
+### Overview
+
 A React SPA, packaged with [Webpack](https://webpack.github.io/), that serves as the web front-end
 
 ## [chain-reaction.mobile](https://github.com/ericnograles/chain-reaction.mobile)
 
+### Overview
 A React Native project that is the baseline for the iOS and Android versions of the app
 
 
