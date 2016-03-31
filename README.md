@@ -38,6 +38,8 @@ This project represents a hypothetical multi-platform application called **Chain
 
 ## Run the iOS App
 
+**Note:** Be sure to install Xcode and/or the Android SDK before running.
+
 1. In a terminal from the root of this repo, type in `cd ./chain-reaction.mobile`
 2. Run `./start.sh`
 
