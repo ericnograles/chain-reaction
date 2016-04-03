@@ -52,7 +52,10 @@ This project represents a hypothetical multi-platform application called **Chain
 The chain-reaction.common library represents all cross-platform shareable code.  This includes all Redux components (store, reducers, actions) and also infrastructure items (services) that talk to external resources, such as a Web API.
 
 ### Development Mode
-This library was designed to be independent of any client framework.  As such, you'll notice that we use [NPM symlinks](https://docs.npmjs.com/cli/link) in the root `install.sh` to point the Web and Mobile projects to the source code.  This is so that you can develop on the library concurrently with the web and mobile components.
+
+This library was designed to be independent of any client framework.  As such, you'll notice that we use [NPM symlinks](https://docs.npmjs.com/cli/link) in the root `install.sh` to point the Web project to the source code.  This is so that you can develop on the library concurrently with the web and mobile components.
+
+For the Mobile application, because React Native's packager [doesn't quite play well with symlinks](https://github.com/facebook/react-native/issues/637), we simply have a Nodemon instance as part of its `start.sh` file which brings in an updated copy of chain-reaction.common to the mobile project.
 
 In practice, a library like this may live in npm (public or private) which you can then `npm install` normally into the web or mobile projects, as any other Node library.
 

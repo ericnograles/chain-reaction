@@ -30,12 +30,14 @@ cd ../chain-reaction.common
 rm -rf ./node_modules
 git pull
 npm3 install
+npm3 link
 
 # Web
 cd ../chain-reaction.web
 rm -rf ./node_modules
 git pull
 npm3 install
+npm3 link chain-reaction.common
 
 # Mobile
 cd ../chain-reaction.mobile
