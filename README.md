@@ -53,7 +53,7 @@ The chain-reaction.common library represents all cross-platform shareable code. 
 
 ### Development Mode
 
-This library was designed to be independent of any client framework.  As such, you'll notice that we use [NPM symlinks](https://docs.npmjs.com/cli/link) in the root `install.sh` to point the Web project to the source code.  This is so that you can develop on the library concurrently with the web and mobile components.
+This library was designed to be independent of any client framework.  As such, you'll notice that we use [NPM symlinks](https://docs.npmjs.com/cli/link) in the root `install.sh` to point the Web project to the source code.  This is so that you can develop on the library concurrently with the web components.
 
 For the Mobile application, because React Native's packager [doesn't quite play well with symlinks](https://github.com/facebook/react-native/issues/637), we simply have a Nodemon instance as part of its `start.sh` file which brings in an updated copy of chain-reaction.common to the mobile project.
 
